@@ -4,7 +4,6 @@ class BootStrap {
 
     def init = { servletContext ->
 
-    	assert mailerService.defaultSender
     }
     def destroy = {
     }
