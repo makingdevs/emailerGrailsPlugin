@@ -1,10 +1,10 @@
 # Toolkit Email Template
 
-This plugin is a module extracted from (server-app)[https://bitbucket.org/bookandlearn/server-app/overview], and it's part of the same app.
+This plugin is a module extracted from [server-app](https://bitbucket.org/bookandlearn/server-app/overview), and it's part of the same app.
 
 ## Deployment
 
-The plugin is deployed in (Nexus)[http://nexus.masterkeyeducation.com]. So if you are ready to deploy, please change the version in **ToolkitPdfEmailGrailsPlugin.groovy**, after that, in your console:
+The plugin is deployed in [Nexus](http://nexus.masterkeyeducation.com). So if you are ready to deploy, please change the version in **ToolkitPdfEmailGrailsPlugin.groovy**, after that, in your console:
 
 `grails  maven-deploy -repository=pluginReleases`
 
