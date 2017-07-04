@@ -45,9 +45,10 @@ Brief summary/description of the plugin.
 
     def doWithSpring = {
         // TODO Implement runtime spring config (optional)
+        def config = application.config.grails.plugin.mailer ?: [:]
         mailerService(MailerService){
-            defaultAddress = application.config.grails.plugin.mailer.defaultAddress
-            defaultSender = application.config.grails.plugin.mailer.defaultSender
+            defaultAddress = config.defaultAddress as String
+            defaultSender = config.defaultSender as String
         }
     }
 
