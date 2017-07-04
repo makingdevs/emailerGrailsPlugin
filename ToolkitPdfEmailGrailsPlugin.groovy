@@ -1,7 +1,9 @@
+import com.sophossystems.idiomasXelMundo.mail.MailerService
+
 class ToolkitPdfEmailGrailsPlugin {
     def groupId = "com.sophossystems.idiomasXelMundo"
     // the plugin version
-    def version = "0.1"
+    def version = "0.1.1"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.3 > *"
     // resources that are excluded from plugin packaging
@@ -43,6 +45,10 @@ Brief summary/description of the plugin.
 
     def doWithSpring = {
         // TODO Implement runtime spring config (optional)
+        mailerService(MailerService){
+            defaultAddress = application.config.grails.plugin.mailer.defaultAddress
+            defaultSender = application.config.grails.plugin.mailer.defaultSender
+        }
     }
 
     def doWithDynamicMethods = { ctx ->
