@@ -1,9 +1,13 @@
 grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
+
+def publisherUsername = System.getenv("NEXUS_USERNAME")
+def publisherPassword = System.getenv("NEXUS_PASSWORD")
+assert publisherUsername && publisherPassword
 grails.project.dependency.distribution = {
     remoteRepository(id: "pluginReleases", url: "http://nexus.masterkeyeducation.com/repository/mke-plugin-release/") {
-        authentication username: "admin", password: "admin123"
+        authentication username: publisherUsername, password: publisherPassword
     }
 }
 
