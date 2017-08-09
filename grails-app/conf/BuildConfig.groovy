@@ -46,13 +46,16 @@ grails.project.dependency.resolution = {
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
         // runtime 'mysql:mysql-connector-java:5.1.27'
+        compile "com.github.groovy-wslite:groovy-wslite:1.1.3"
     }
 
     plugins {
         build(":release:3.0.1",
-              ":rest-client-builder:1.0.3") {
+              ":rest-client-builder:1.0.3",
+              ":tomcat:7.0.52.1") {
             export = false
         }
         compile ":mandrill:0.5"
+
     }
 }
