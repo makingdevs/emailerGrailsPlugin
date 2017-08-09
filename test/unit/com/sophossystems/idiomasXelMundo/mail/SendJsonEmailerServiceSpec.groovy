@@ -7,12 +7,13 @@ import spock.lang.Specification
  * See the API for {@link grails.test.mixin.services.ServiceUnitTestMixin} for usage instructions
  */
 @TestFor(SendJsonEmailerService)
+@Mock(SendJsonEmailerService)
 class SendJsonEmailerServiceSpec extends Specification {
 
     def builder = new groovy.json.JsonBuilder()
 
     void "send json to emailer for method post"() {
-      when:"create a json"
+      given:"create a json like email"
       Emailer email = new Emailer(idE:"5989ecd95c95c4513f84d724",
                                   toE:"leovergara.dark@gmail.com",
                                   ccE: "brandon@makingdevs.com",
@@ -22,8 +23,9 @@ class SendJsonEmailerServiceSpec extends Specification {
                                   despedidaE: "Adios",
                                   firmaE: "Making Devs, 2017"
                                  )
-      then:
+      when:"send email to amiler"
         def result = service.sendJsonEmailer(email)
+      then:
         result.statusCode == 201
 
 
