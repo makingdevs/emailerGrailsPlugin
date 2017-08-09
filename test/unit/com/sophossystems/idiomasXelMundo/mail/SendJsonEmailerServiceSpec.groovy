@@ -24,7 +24,7 @@ class SendJsonEmailerServiceSpec extends Specification {
                                  )
       then:
         def result = service.sendJsonEmailer(email)
-        result
+        result.statusCode == 201
 
 
     }
