@@ -13,7 +13,7 @@ class SendJsonEmailerServiceSpec extends Specification {
     def builder = new groovy.json.JsonBuilder()
 
     void "send json to emailer for method post"() {
-      given:"create a json like email"
+      given:"create a json as email"
       Emailer email = new Emailer(idE:"5989ecd95c95c4513f84d724",
                                   toE:"leovergara.dark@gmail.com",
                                   ccE: "brandon@makingdevs.com",
