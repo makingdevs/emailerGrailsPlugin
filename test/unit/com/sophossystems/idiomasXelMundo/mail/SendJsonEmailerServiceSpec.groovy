@@ -14,9 +14,9 @@ class SendJsonEmailerServiceSpec extends Specification {
 
     void "send json to emailer for method post"() {
       given:"create a json like email"
-      Emailer email = new Emailer(idE:"5989ecd95c95c4513f84d724",
-                                  toE:"leovergara.dark@gmail.com",
-                                  ccE: "brandon@makingdevs.com",
+      Emailer email = new Emailer(idE:"5995cf990bb6235340152acf",
+                                  toE:"hoshdog@gmail.com",
+                                  ccE: "antonio@makingdevs.com",
                                   ccoE: "emailer2@app.com",
                                   subjectE: "realizando test",
                                   mensajeE: "Hola a todos",
